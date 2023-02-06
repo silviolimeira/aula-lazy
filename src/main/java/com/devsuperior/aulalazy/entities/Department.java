@@ -15,6 +15,8 @@ public class Department {
 	public String name;
 	
 	@OneToMany(mappedBy = "department")
+	// Teste alterando fetch: NÃO RECOMENDADO.
+	//@OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
 	public List<Employee> employees = new ArrayList<>();
 	
 	public Department() {

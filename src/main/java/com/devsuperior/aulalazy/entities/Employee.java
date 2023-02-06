@@ -12,7 +12,7 @@ public class Employee {
 	public String name;	
 	public String email;
 	
-	@ManyToOne
+	@ManyToOne //(fetch = FetchType.LAZY)
 	@JoinColumn(name = "department_id")
 	public Department department;
 	
